@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/neonlex/hassle.git
+  revision: 4996fea736584d337b4ff18f7e795601ca37ef19
+  specs:
+    hassle (0.0.1)
+      haml
+      rack
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -71,5 +79,6 @@ PLATFORMS
 
 DEPENDENCIES
   haml (>= 3.0.25)
+  hassle!
   rails (= 3.0.3)
   sqlite3-ruby
