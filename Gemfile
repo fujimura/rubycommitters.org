@@ -9,7 +9,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'haml', '>= 3.0.25'
 
-gem 'hassle', :git => 'git://github.com/neonlex/hassle.git'
+gem 'hassle', :git => 'git://github.com/koppen/hassle.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'
