@@ -25,11 +25,18 @@ body {
   height: 100%;
 }
 
-#header {
-  width:100%;
+#main_wrapper {
   text-align:center;
+  #main {
+    @include top-radius;
+    width:600px;
+    margin:0 auto;
+    background-color:blue;
+  }
+}
+
+#header {
   float:left;
-  margin: 20px 0 0 0;
   h1 {
     @include top-radius;
     @include gradient(lighten($red, 15%), $red);
@@ -39,20 +46,17 @@ body {
     background-color:$red;
     color:white;
     padding: 15px 20px 10px;
-    margin:0 auto;
+    margin:20px auto 0 auto;
     text-align:left;
   }
 }
 
 #accounts_wrapper {
-  width:100%;
-  text-align:center;
   float:left;
   .accounts {
     background-color:$red;
     width:600px;
     padding: 0 20px 10px 20px;
-    margin:0 auto;
     .account {
       @include radius;
       background-color:$bg;
