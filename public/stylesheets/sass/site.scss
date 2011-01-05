@@ -6,6 +6,10 @@ h1, h2, h3, h4, h5, h6, div, p, span, ul, li, dl, dt, dd {
   padding: 0
 }
 
+ul, li {
+  list-style:inside none;
+}
+
 body {
   margin:0px;
   padding:0px;
