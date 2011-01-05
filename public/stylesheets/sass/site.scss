@@ -69,13 +69,22 @@ body {
       h2 {
         font-size:40px;
       }
-      table.left {
-        width:45%;
+      table.left, table.right {
+        width:50%;
         float:left;
       }
       table.right {
-        width:45%;
-        float:left;
+        th, td {
+          vertical-align:top;
+          padding: 5px 0;
+        }
+        th {
+          width:6.5em;
+          text-align:left;
+        }
+        td {
+          text-align:left;
+        }
       }
     }
   }
