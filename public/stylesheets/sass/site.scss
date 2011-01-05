@@ -18,11 +18,11 @@ body {
 }
 
 .image-wrapper {
-  height: 100px;
+  text-align:center;
 }
 
 .image-wrapper img {
-  height: 100%;
+  width: 160px;
 }
 
 #main_wrapper {
@@ -56,15 +56,26 @@ body {
   .accounts {
     background-color:$red;
     width:600px;
+    float:left;
     padding: 0 20px 10px 20px;
     .account {
       @include radius;
+      float:left;
+      width:100%;
       background-color:$bg;
       border-bottom: solid 1px $bg;
       padding: 5px 0;
       margin: 0 0 10px 0;
       h2 {
         font-size:40px;
+      }
+      table.left {
+        width:45%;
+        float:left;
+      }
+      table.right {
+        width:45%;
+        float:left;
       }
     }
   }

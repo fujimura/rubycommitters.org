@@ -1,6 +1,14 @@
 %li.account
   %h2= account.username
-  %table
+  %table.left
+    %tr
+      %td
+        %ul
+          - if account.portraits.empty?
+            %li
+          - else
+            = render :partial => 'portrait', :collection => account.portraits
+  %table.right
     - unless account.names.empty?
       %tr
         %td Names:
@@ -25,12 +33,6 @@
         %td
           %ul
             = render :partial => 'service', :collection => account.services
-    - unless account.portraits.empty?
-      %tr
-        %td Portraits:
-        %td
-          %ul
-            = render :partial => 'portrait', :collection => account.portraits
     / FIXME: unsure how to link to ISBN. :-(
     /
       <haml:silent>     unless account.books.empty?
