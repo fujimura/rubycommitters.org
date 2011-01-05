@@ -22,7 +22,7 @@ body {
 }
 
 .image-wrapper img {
-  width: 160px;
+  width: 120px;
 }
 
 #main_wrapper {
@@ -53,6 +53,7 @@ body {
 
 #accounts_wrapper {
   float:left;
+  margin-bottom:30px;
   .accounts {
     background-color:$red;
     width:600px;
@@ -60,18 +61,18 @@ body {
     padding: 0 20px 10px 20px;
     .account {
       @include radius;
+      width: 560px;
       float:left;
-      width:100%;
       background-color:$bg;
       border-bottom: solid 1px $bg;
-      padding: 5px 0;
+      padding: 5px 20px 10px;
       margin: 0 0 10px 0;
       h2 {
         font-size:40px;
         border-bottom: 1px solid #AAA;
         font-size: 40px;
         line-height: 40px;
-        margin: 0px 15px 15px;
+        margin: 0 0 15px;
         padding: 3px 0px 5px;
       }
       table.left, table.right {
@@ -81,7 +82,7 @@ body {
       table.right {
         th, td {
           vertical-align:top;
-          padding: 5px 0;
+          padding: 0 5px 10px;
         }
         th {
           width:6.5em;
