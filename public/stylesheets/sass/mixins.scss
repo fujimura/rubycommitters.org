@@ -1,0 +1,24 @@
+@mixin radius($radius: 5px){
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+@mixin top-radius($radius: 5px){
+  -webkit-border-top-left-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  -moz-border-radius-topright: $radius;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin gradient($from:black, $to:gray){
+  background: -moz-linear-gradient(top, $from, $to);
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background-color: mix($from, $to);
+}
+
+@mixin lheight($h){
+  font-size: $h;
+  line-height: $h;
+}

@@ -1,0 +1,46 @@
+%li.account
+  %h2= account.username
+  %table
+    - unless account.names.empty?
+      %tr
+        %td Names:
+        %td
+          %ul
+            = render :partial => 'name', :collection => account.names
+    - unless account.nicks.empty?
+      %tr
+        %td Nicknames:
+        %td
+          %ul
+            = render :partial => 'name', :collection => account.nicks
+    - unless account.sites.empty?
+      %tr
+        %td Sites:
+        %td
+          %ul
+            = render :partial => 'site', :collection => account.sites
+    - unless account.services.empty?
+      %tr
+        %td Services:
+        %td
+          %ul
+            = render :partial => 'service', :collection => account.services
+    - unless account.portraits.empty?
+      %tr
+        %td Portraits:
+        %td
+          %ul
+            = render :partial => 'portrait', :collection => account.portraits
+    / FIXME: unsure how to link to ISBN. :-(
+    /
+      <haml:silent>     unless account.books.empty?
+      </haml:silent><haml:block>      <tr>
+      <td>Books:</td>
+      <td>
+      <ul>
+      <haml:silent>             account.books.each do |book|
+      </haml:silent><haml:block>              <li><haml:loud> book.key </haml:loud></li>
+      </haml:block>          </ul>
+      </td>
+      </tr>
+      </haml:block>

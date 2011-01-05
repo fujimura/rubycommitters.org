@@ -1,0 +1,63 @@
+@import "colors";
+@import "mixins";
+
+h1, h2, h3, h4, h5, h6, div, p, span, ul, li, dl, dt, dd {
+  margin:0;
+  padding: 0
+}
+
+body {
+  margin:0px;
+  padding:0px;
+  background-color:$bg;
+  font-family: Georgia, Palatino, 'Times New Roman', Times, serif;
+}
+
+.image-wrapper {
+  height: 100px;
+}
+
+.image-wrapper img {
+  height: 100%;
+}
+
+#header {
+  width:100%;
+  text-align:center;
+  float:left;
+  margin: 20px 0 0 0;
+  h1 {
+    @include top-radius;
+    @include gradient(lighten($red, 15%), $red);
+    font-size:60px;
+    line-height: 50px;
+    width:600px;
+    background-color:$red;
+    color:white;
+    padding: 15px 20px 10px;
+    margin:0 auto;
+    text-align:left;
+  }
+}
+
+#accounts_wrapper {
+  width:100%;
+  text-align:center;
+  float:left;
+  .accounts {
+    background-color:$red;
+    width:600px;
+    padding: 0 20px 10px 20px;
+    margin:0 auto;
+    .account {
+      @include radius;
+      background-color:$bg;
+      border-bottom: solid 1px $bg;
+      padding: 5px 0;
+      margin: 0 0 10px 0;
+      h2 {
+        font-size:40px;
+      }
+    }
+  }
+}
